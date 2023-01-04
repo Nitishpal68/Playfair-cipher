@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>
+    Learn Cryptography the Graphical Way by Nitish
+  </title>
+  <style>
+      input {
+        width: 100%;
+      }
+      button {
+        margin: 1rem 0;
+      }
+      table {
+        margin: 1rem 0;
+        width: 100%;
+      }
+      td {
+        border: 1px solid gray;
+        padding: 0.5rem;
+        max-width: 30px;
+        text-align: center;
+        font-size: 16px;
+      }
+      ul,
+      li {
+        margin: 10px 35px;
+      }
+    </style>
+</head>
+<body>
+  <div class="topbar">
+      <h3>Playfair Cipher</h3>
+      <p>By Nitish</p>
+    </div>
+
+<main class="content">
+      <h3 align="center">Playfair Cipher</h3><br>
+      <h6 style="margin: 5px 0px -20px 0px; line-height: 16px;">
+        NOTE: There should be no repetition of the alphabets in the key.<br>
+        Ex: hello, here l occurs twice.
+      </h6>
+      <br>
+      <input type="text" name="key" id="key" placeholder="Enter key here ... Ex: monarchy">
+      <button onclick="generateGrid()">DONE</button>
+
+      <h6>
+        Note: If column shows undefined please refresh page and try again.
+      </h6>
+
+      <table id="main_grid">
+        <tbody><tr id="row1">
+          <td id="col11">a</td>
+          <td id="col12">b</td>
+          <td id="col13">c</td>
+          <td id="col14">d</td>
+          <td id="col15">e</td>
+        </tr>
+        <tr id="row2">
+          <td id="col21">f</td>
+          <td id="col22">g</td>
+          <td id="col23">h</td>
+          <td id="col24">i/j</td>
+          <td id="col25">k</td>
+        </tr>
+        <tr id="row3">
+          <td id="col31">l</td>
+          <td id="col32">m</td>
+          <td id="col33">n</td>
+          <td id="col34">o</td>
+          <td id="col35">p</td>
+        </tr>
+        <tr id="row4">
+          <td id="col41">q</td>
+          <td id="col42">r</td>
+          <td id="col43">s</td>
+          <td id="col44">t</td>
+          <td id="col45">u</td>
+        </tr>
+        <tr id="row5">
+          <td id="col51">v</td>
+          <td id="col52">w</td>
+          <td id="col53">x</td>
+          <td id="col54">y</td>
+          <td id="col55">z</td>
+        </tr>
+      </tbody></table>
+
+      <input type="text" name="plain_text" id="plain_text" placeholder="Enter plain text here ...">
+      <button onclick="ptFixer()">DONE</button>
+
+      <h4>FIXED PLAIN TEXT IN PAIRS</h4>
+      <p id="plain_text_display_area"></p>
+
+      <div id="grids"></div>
+    </main>
+    <footer>
+      © 2020 | Developed by Nitish
+    </footer>
+  <script src="playfair.js"></script>
+</body>
+</html>
